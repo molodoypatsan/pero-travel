@@ -13,6 +13,8 @@ new Swiper('.popular-excursions__slider', {
         disableOnInteraction: false,
     },
     spaceBetween: 20,
+    slidesPerView: 3.5,
+
 });
 
 new Swiper('.reviews__slider', {
@@ -30,5 +32,5 @@ new Swiper('.reviews__slider', {
         disableOnInteraction: false,
     },
     spaceBetween: 20,
-    sliderPerGroup: 2
+    slidesPerView: 2,
 });

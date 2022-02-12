@@ -32,8 +32,9 @@ ul, li {
 }
 
 .container {
-    max-width: 1120px;
+    max-width: 1160px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .button {
@@ -46,6 +47,7 @@ ul, li {
     display: inline-flex;
     align-items: center;
     transition: 0.3s;
+    cursor: pointer;
     &__arrow {
         transition: 0.3s;
         margin-left: 5px;
@@ -268,21 +270,20 @@ ul, li {
     }
 }
 
-.popular-excursions {
-    margin-top: 150px;
-}
-
-.popular-excursions__sliders,
-.reviews__slider {
-    width: calc(100% + 40rem);
+.slider-container {
+    display: flex;
 }
 
 .popular-excursions__slider {
-    position: relative;
+    flex: 0 0 100%;
 }
 
-.swiper-slide {
-    flex-shrink: 1;
+.popular-excursions__slider .swiper-slide {
+    width: 360px !important;
+}
+
+.popular-excursions {
+    margin-top: 150px;
 }
 
 .popular-excursions__slider-blocks {
@@ -569,6 +570,14 @@ ul, li {
     margin-top: 150px;
 }
 
+.reviews .swiper-slide {
+    width: 740px !important;
+}
+
+.reviews__slider {
+    overflow: visible;
+}
+
 .reviews__blocks {
     display: flex;
 }
@@ -578,7 +587,6 @@ ul, li {
     background-color: #EDEDED;
     border-radius: 10px;
     display: flex;
-    max-width: 775px;
     position: relative;
     .reviews__block-quotes {
         position: absolute;
@@ -625,4 +633,65 @@ ul, li {
     font-size: 14px;
     line-height: 17px;
     color: #282828;
+}
+
+.forms {
+    background: url('../img/Rectangle 27.png') no-repeat center/cover;
+    margin-top: 150px;
+    position: relative;
+    &::before {
+        content: '';
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.forms__row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.forms__block {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    padding: 150px 105px;
+    width: 560px;
+}
+
+.forms__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.forms__description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFC700;
+}
+
+.form__input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    width: 100%;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-top: 45px;
+    background-color: transparent;
+}
+
+.forms__buttons-button {
+    margin-top: 84px;
+    padding: 16px 52px;
+    border: none;
 }
